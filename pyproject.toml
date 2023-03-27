@@ -1,0 +1,10 @@
+[tool.pytest.ini_options]
+pythonpath = [
+  ".", "app"
+]
+asyncio_mode="auto"
+
+[tool.pytest]
+addopts = "-p no:warnings --verbose --cov=my_package"
+
+
