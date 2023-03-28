@@ -23,7 +23,6 @@ async def remove_repo(your_path):
 def main():
     with multiprocessing.Pool(3) as pool:
         result = pool.apply(download_file, args=(url, your_path))
-    pool.close()
     pool.join()
     for file in result:
         filename = f'repo/{file}'
